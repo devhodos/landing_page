@@ -4,5 +4,8 @@ import react from '@vitejs/plugin-react';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/hodos/landing_page/', // Replace 'hodosindia' with your repository name
+  base: '/landing_page/', // Ensure this matches the name of your GitHub repo
+  build: {
+    outDir: 'dist', // Specify the directory where the built files will go
+  },
 });
