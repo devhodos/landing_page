@@ -15,8 +15,14 @@ const About = () => {
             </p>
           </div>
           <div className="bg-gray-100 h-64 rounded-xl">
-            {/* Placeholder for about section image/video */}
-          </div>
+  <iframe
+    className="w-full h-full rounded-xl"
+    src="https://www.youtube.com/embed/evNtw03DmjM"
+    title="YouTube video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
         </div>
       </div>
     </section>
