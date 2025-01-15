@@ -26,10 +26,10 @@ export const internValidation = (req, res, next) => {
     const schema = Joi.object({
         name: Joi.string().min(5).max(100).required(),
         email: Joi.string().email().required(),
-        phone: Joi.string().min(10).required(),
-        education: Joi.string().min(10).required(),
+        phone: Joi.string().min(10).max(10).required(),
+        education: Joi.string().required(),
         dept: Joi.string().required(),
-        req_exp: Joi.string().required(),
+        req_exp: Joi.string(),
     });
 
     const { error } = schema.validate(req.body);
