@@ -29,7 +29,7 @@ export const internValidation = (req, res, next) => {
         phone: Joi.string().min(10).max(10).required(),
         education: Joi.string().required(),
         dept: Joi.string().required(),
-        req_exp: Joi.string(),
+        req_exp: Joi.string().allow(''),
     });
 
     const { error } = schema.validate(req.body);
