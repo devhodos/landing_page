@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import { Play } from 'lucide-react';
-import ContactForm from '../form/contact'; // Import the ContactForm component
+import { useState } from "react";
+import { Play } from "lucide-react";
+import { TypeAnimation } from "react-type-animation";
+import ContactForm from "../form/contact"; // Import the ContactForm component
 
 const Hero = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
@@ -19,19 +20,43 @@ const Hero = () => {
   return (
     <section className="pt-32 pb-20 px-4">
       <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Simplify Your Travel Expenses
+        <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
+          Simplify Your{" "}
+          <div className="inline-block overflow-visible">
+            <TypeAnimation
+              sequence={[
+                "Travel Expenses",
+                2000,
+                "Expense Reporting",
+                2000,
+                "Bill Management",
+                2000,
+                "Workflow Automation",
+                2000,
+                "Approvals",
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              className="text-blue-600 inline-block"
+              repeat={Infinity}
+            />
+          </div>
         </h1>
+
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Effortless expense management for corporate travelers. Track, manage, and report expenses in one place.
         </p>
         <div className="flex justify-center gap-4">
-          <button
-            onClick={handleGetStartedClick}
-            className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors text-lg"
-          >
-            Get Started
-          </button>
+        <a
+  href="https://main.d2yeebuc0aimjp.amplifyapp.com/signup"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors text-lg"
+>
+  Get Started
+</a>
+
           <button
             onClick={handleWatchDemoClick}
             className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:bg-gray-50 transition-colors text-lg flex items-center gap-2"
@@ -56,7 +81,7 @@ const Hero = () => {
               </div>
               <h2 className="text-2xl font-semibold mb-4">Request a Demo</h2>
               {/* Render the ContactForm component here */}
-              <ContactForm /> {/* This will render the Contact form */}
+              <ContactForm />
             </div>
           </div>
         )}
@@ -79,8 +104,8 @@ const Hero = () => {
               <div className="relative w-full h-full">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-lg"
-                  src="https://www.youtube.com/embed/ffhdOC30xK0?autoplay=1"
-                  style={{ border: 'none' }}
+                  src="https://www.youtube.com/embed/lMwFxU5jM0w?autoplay=1"
+                  style={{ border: "none" }}
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
