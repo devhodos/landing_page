@@ -54,16 +54,9 @@ const Features = () => {
   ]
 
   return (
-<section id="features" className="py-24 relative overflow-hidden bg-white">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="features" className="py-24 relative overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -139,25 +132,29 @@ const FeatureCard = ({ title, description, image, icon, isReversed }: FeatureCar
 
           <p className="text-gray-600 text-lg leading-relaxed mb-6">{description}</p>
 
-          <div className="inline-flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition-colors duration-300">
+          {/* Learn More Button */}
+          <button
+            onClick={() => window.open("https://main.d2yeebuc0aimjp.amplifyapp.com/signup/", "_blank")}
+            className="inline-flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition-colors duration-300"
+          >
             <span>Learn more</span>
             <ChevronRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-          </div>
+          </button>
         </div>
       </motion.div>
 
       <motion.div
-        className="w-full md:w-1/2"
+        className="w-full md:w-1/2 flex justify-center"
         initial={{ opacity: 0, x: isReversed ? -50 : 50, scale: 0.95 }}
         animate={inView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0, x: isReversed ? -50 : 50, scale: 0.95 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <div className="relative overflow-hidden rounded-2xl shadow-2xl group ">
+        <div className="relative overflow-hidden rounded-2xl shadow-2xl w-fit">
           <LazyLoadImage
             src={image || "/placeholder.svg"}
             alt={title}
             effect="blur"
-            className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-auto object-cover transition-transform duration-700"
           />
         </div>
       </motion.div>

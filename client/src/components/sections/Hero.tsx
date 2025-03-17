@@ -1,31 +1,55 @@
 import { useState } from "react";
-import { Play } from "lucide-react";
+import { Play, Plane, CreditCard, Receipt, Briefcase, MapPin, Globe, FileText, CheckCircle, Cpu } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
-import ContactForm from "../form/contact"; // Import the ContactForm component
+import ContactForm from "../form/contact";
 
 const Hero = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
 
-  // Function to show the form when "Get Started" is clicked
-  const handleGetStartedClick = () => {
-    setIsFormVisible(true);
-  };
-
-  // Function to toggle the visibility of the video card
   const handleWatchDemoClick = () => {
     setIsVideoVisible(true);
   };
 
   return (
-    <section className="pt-32 pb-20 px-4">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-b from-blue-50 to-white">
+      {/* Floating Icons (Random Positions) */}
+      <div className="absolute top-20 left-16 text-blue-500 opacity-40 animate-float">
+        <Plane size={40} />
+      </div>
+      <div className="absolute top-20 right-20 text-green-500 opacity-40 animate-float-slow">
+        <CreditCard size={40} />
+      </div>
+      <div className="absolute top-48 left-12 text-purple-500 opacity-40 animate-float">
+        <Receipt size={40} />
+      </div>
+      <div className="absolute bottom-40 right-36 text-orange-500 opacity-40 animate-float-slow">
+        <Briefcase size={40} />
+      </div>
+      <div className="absolute bottom-16 left-24 text-red-500 opacity-40 animate-float">
+        <MapPin size={50} />
+      </div>
+
+      {/* AI Auditing Icon */}
+      <div className="absolute top-40 right-10 text-gray-600 opacity-50 animate-float">
+        <Cpu size={40} />
+      </div>
+
+      {/* Additional Icons */}
+      <div className="absolute top-64 left-80 text-gray-600 opacity-50 animate-float">
+        <FileText size={40} />
+      </div>
+      <div className="absolute top-80 right-40 text-green-600 opacity-50 animate-float">
+        <CheckCircle size={40} />
+      </div>
+
+      <div className="max-w-7xl mx-auto text-center relative z-10">
         <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
-          Simplify Your{" "}
+          AI-Powered{" "}
           <div className="inline-block overflow-visible">
             <TypeAnimation
               sequence={[
-                "Travel Expenses",
+                "Auditing",
                 2000,
                 "Expense Reporting",
                 2000,
@@ -45,17 +69,18 @@ const Hero = () => {
         </h1>
 
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Effortless expense management for corporate travelers. Track, manage, and report expenses in one place.
+          Effortless AI-driven expense and audit management for corporate travelers. Track, analyze, and automate reporting seamlessly.
         </p>
+
         <div className="flex justify-center gap-4">
-        <a
-  href="https://main.d2yeebuc0aimjp.amplifyapp.com/signup"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors text-lg"
->
-  Get Started
-</a>
+          <a
+            href="https://main.d2yeebuc0aimjp.amplifyapp.com/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors text-lg flex items-center gap-2"
+          >
+            <Globe size={20} /> Get Started
+          </a>
 
           <button
             onClick={handleWatchDemoClick}
@@ -70,17 +95,13 @@ const Hero = () => {
         {isFormVisible && (
           <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
-              {/* Close button */}
-              <div className="absolute top-2 right-2">
-                <button
-                  onClick={() => setIsFormVisible(false)}
-                  className="text-gray-600 text-2xl font-bold"
-                >
-                  &times;
-                </button>
-              </div>
+              <button
+                onClick={() => setIsFormVisible(false)}
+                className="absolute top-2 right-2 text-gray-600 text-2xl font-bold"
+              >
+                &times;
+              </button>
               <h2 className="text-2xl font-semibold mb-4">Request a Demo</h2>
-              {/* Render the ContactForm component here */}
               <ContactForm />
             </div>
           </div>
@@ -90,17 +111,12 @@ const Hero = () => {
         {isVideoVisible && (
           <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-4xl w-full h-[60vh] relative">
-              {/* Close button */}
-              <div className="absolute top-2 right-2">
-                <button
-                  onClick={() => setIsVideoVisible(false)}
-                  className="text-gray-600 text-2xl font-bold"
-                >
-                  &times;
-                </button>
-              </div>
-
-              {/* Video iframe */}
+              <button
+                onClick={() => setIsVideoVisible(false)}
+                className="absolute top-2 right-2 text-gray-600 text-2xl font-bold"
+              >
+                &times;
+              </button>
               <div className="relative w-full h-full">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-lg"
