@@ -62,8 +62,8 @@ const Features = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-blue-600 to-gray-900 bg-clip-text text-transparent"
-          >
+            className="flex items-center justify-center text-4xl md:text-5xl font-bold mb-4 h-[100px] bg-gradient-to-r from-gray-900 via-blue-600 to-gray-900 bg-clip-text text-transparent"
+            >
             Why Choose Hodos
           </motion.h2>
           <motion.p

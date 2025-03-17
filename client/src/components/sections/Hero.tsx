@@ -108,27 +108,29 @@ const Hero = () => {
         )}
 
         {/* Video Modal */}
-        {isVideoVisible && (
-          <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg max-w-4xl w-full h-[60vh] relative">
-              <button
-                onClick={() => setIsVideoVisible(false)}
-                className="absolute top-2 right-2 text-gray-600 text-2xl font-bold"
-              >
-                &times;
-              </button>
-              <div className="relative w-full h-full">
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full rounded-lg"
-                  src="https://www.youtube.com/embed/lMwFxU5jM0w?autoplay=1"
-                  style={{ border: "none" }}
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* Video Modal */}
+{isVideoVisible && (
+  <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-[1000]">
+    <div className="bg-white p-6 rounded-lg shadow-lg max-w-4xl w-full h-[60vh] relative z-[1001]">
+      <button
+        onClick={() => setIsVideoVisible(false)}
+        className="absolute top-2 right-2 text-gray-600 text-2xl font-bold"
+      >
+        &times;
+      </button>
+      <div className="relative w-full h-full">
+        <iframe
+          className="absolute top-0 left-0 w-full h-full rounded-lg"
+          src="https://www.youtube.com/embed/lMwFxU5jM0w?autoplay=1"
+          style={{ border: "none" }}
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+)}
+
       </div>
     </section>
   );

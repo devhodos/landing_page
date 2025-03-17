@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import './App.css'
+import OnboardingSection from './components/sections/onboard';
 const Hero = lazy(() => import('./components/sections/Hero'));
 const Features = lazy(() => import('./components/sections/Features'));
 const About = lazy(() => import('./components/sections/About'));
@@ -34,6 +35,7 @@ function App() {
                 <main>
                   <Hero />
                   <Features />
+                  <OnboardingSection/>
                   <About />
                 </main>
               </>

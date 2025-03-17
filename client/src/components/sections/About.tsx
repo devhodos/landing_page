@@ -11,6 +11,7 @@ const About = () => {
             <p className="text-gray-600">
               Our platform streamlines the entire expense process, from receipt capture to reimbursement, saving time and reducing errors.
             </p>
+
           </div>
           <div className="bg-gray-100 h-64 rounded-xl">
             <div className="relative w-full h-full">

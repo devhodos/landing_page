@@ -6,6 +6,12 @@ const Footer = () => {
           <div>
             <div className="text-xl font-bold text-blue-600 mb-4">Hodos</div>
             <p className="text-gray-600">Simplifying travel expense management.</p>
+            <p className="text-gray-600">
+              Contact us at{" "}
+              <a href="mailto:hodosindia@gmail.com" className="font-bold text-blue-600 hover:underline">
+                hodosindia@gmail.com
+              </a>
+            </p>
           </div>
           {/* Add more footer content as needed */}
         </div>
