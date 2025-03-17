@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-b from-blue-50 to-white">
       {/* Floating Icons (Random Positions) */}
-      <div className="absolute top-20 left-16 text-blue-500 opacity-40 animate-float">
+      <div className="absolute top-2 left-16 text-blue-500 opacity-40 animate-float">
         <Plane size={40} />
       </div>
       <div className="absolute top-20 right-20 text-green-500 opacity-40 animate-float-slow">
@@ -45,7 +45,7 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
-          AI-Powered{" "}
+         Automate Your{" "}
           <div className="inline-block overflow-visible">
             <TypeAnimation
               sequence={[
@@ -93,7 +93,7 @@ const Hero = () => {
 
         {/* Request Demo Form Modal */}
         {isFormVisible && (
-          <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+          <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-[1000]">
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
               <button
                 onClick={() => setIsFormVisible(false)}
