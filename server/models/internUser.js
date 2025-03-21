@@ -7,6 +7,10 @@ const internSchema = new mongoose.Schema({
     education: { type: String, required: true },
     dept: { type: String, required: true },
     req_exp: { type: String },
+    mailed: {
+        type: Boolean,
+        default: false
+    }
 });
 
 const User = mongoose.model('intern', internSchema);
